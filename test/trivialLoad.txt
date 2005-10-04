@@ -1,0 +1,16 @@
+process GeometryTest = {
+# empty input service, fire 10 events
+        source = EmptyInputService {untracked int32 maxEvents = 2}
+        es_source = EmptyESSource { 
+	   string recordName = "IdealGeometryRecord"
+	   vuint32 firstValid = { 1 }
+           bool iovIsRunNotTime = true 
+        }
+        es_module = HcalHardcodeGeometryEP {}
+	es_module = CaloGeometryBuilder {}
+ 	
+	module print = AsciiOutputModule {}
+        module prod = CaloGeometryAnalyzer {}
+#provide a scheduler path
+        path p1 = { print, prod }      
+}

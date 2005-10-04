@@ -1,0 +1,5 @@
+<use name=Geometry/CaloGeometry>
+<use name=FWCore/Framework>
+<flags SEAL_PLUGIN_NAME="testCaloGeometryESProducer">
+<library file=CaloGeometryAnalyzer.cc name=testCaloGeometryESProducer>
+</library>

@@ -1,5 +1,6 @@
 <use name=Geometry/CaloEventSetup>
 <use name=Geometry/CaloGeometry>
+<use name=DataFormats/HcalDetId>
 <use name=FWCore/Framework>
 <flags SEAL_PLUGIN_NAME="testCaloGeometryESProducer">
 <library file=CaloGeometryAnalyzer.cc name=testCaloGeometryESProducer>

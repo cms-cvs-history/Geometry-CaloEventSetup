@@ -7,6 +7,7 @@ process GeometryTest = {
            bool iovIsRunNotTime = true 
         }
         es_module = HcalHardcodeGeometryEP {}
+        es_module = CaloTowerHardcodeGeometryEP {}
 	es_module = CaloGeometryBuilder {}
  	
 	module print = AsciiOutputModule {}

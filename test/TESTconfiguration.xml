@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<Configuration xmlns="." xmlns:xsi="." xsi:schemaLocation= "." name="CMSConfiguration" version="0">
+   <Include>
+      <File name="cms.xml"   url="."/>
+      <File name="materials.xml"   url="."/>  
+      <File name="rotations.xml"   url="."/>
+      <File name="ecal.xml"   url="../../EcalCommonData"/>
+      <File name="ecalsens.xml"   url="../../EcalSimData"/>
+   </Include>
+   <Root fileName="cms.xml" logicalPartName="OCMS"/>
+</Configuration>
+

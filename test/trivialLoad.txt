@@ -1,11 +1,16 @@
 process GeometryTest = {
 # empty input service, fire 10 events
-        source = EmptySource {untracked int32 maxEvents = 2}
-        es_source = EmptyESSource { 
-	   string recordName = "IdealGeometryRecord"
-	   vuint32 firstValid = { 1 }
-           bool iovIsRunNotTime = true 
-        }
+        source = EmptySource {untracked int32 maxEvents = 10}
+
+	es_source = XMLIdealGeometryESSource { string GeometryConfiguration = "TESTconfiguration.xml" }	
+
+#        es_source = EmptyESSource { 
+#	   string recordName = "IdealGeometryRecord"
+#	   vuint32 firstValid = { 1 }
+#           bool iovIsRunNotTime = true 
+#        }
+
+        es_module = EcalBarrelGeometryEP {}
         es_module = HcalHardcodeGeometryEP {}
         es_module = CaloTowerHardcodeGeometryEP {}
 	es_module = CaloGeometryBuilder {}

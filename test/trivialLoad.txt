@@ -2,7 +2,18 @@ process GeometryTest = {
 # empty input service, fire 10 events
         source = EmptySource {untracked int32 maxEvents = 10}
 
-	es_source = XMLIdealGeometryESSource { string GeometryConfiguration = "TESTconfiguration.xml" }	
+	#Magnetic Field
+	es_source mag = XMLIdealGeometryESSource {
+	  FileInPath GeometryConfiguration ="SimG4Core/Application/test/FieldConfiguration.xml"
+	  string rootNodeName="MagneticFieldVolumes:MAGF"
+	}
+	es_module = VolumeBasedMagneticFieldESProducer {
+	}
+
+	#Geometry
+	es_source geom = XMLIdealGeometryESSource 
+	{ FileInPath GeometryConfiguration = "Geometry/CaloEventSetup/test/TESTconfiguration.xml"
+	  string rootNodeName = ""}
 
 #        es_source = EmptyESSource { 
 #	   string recordName = "IdealGeometryRecord"

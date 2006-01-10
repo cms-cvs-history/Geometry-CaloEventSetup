@@ -2,24 +2,18 @@ process GeometryTest = {
 # empty input service, fire 10 events
         source = EmptySource {untracked int32 maxEvents = 10}
 
-	#Magnetic Field
-	es_source mag = XMLIdealGeometryESSource {
-	  FileInPath GeometryConfiguration ="SimG4Core/Application/test/FieldConfiguration.xml"
-	  string rootNodeName="MagneticFieldVolumes:MAGF"
+##	#Magnetic Field
+	es_source mag= XMLIdealGeometryESSource {
+                  FileInPath GeometryConfiguration ="SimG4Core/Application/test/FieldConfiguration.xml"
+                  string rootNodeName="MagneticFieldVolumes:MAGF"
 	}
 	es_module = VolumeBasedMagneticFieldESProducer {
 	}
-
 	#Geometry
-	es_source geom = XMLIdealGeometryESSource 
-	{ FileInPath GeometryConfiguration = "Geometry/CaloEventSetup/test/TESTconfiguration.xml"
-	  string rootNodeName = ""}
-
-#        es_source = EmptyESSource { 
-#	   string recordName = "IdealGeometryRecord"
-#	   vuint32 firstValid = { 1 }
-#           bool iovIsRunNotTime = true 
-#        }
+        es_source = XMLIdealGeometryESSource {
+                  FileInPath GeometryConfiguration = "SimG4CMS/Calo/test/data/testConfiguration.xml"
+                  string rootNodeName = ""
+        }
 
         es_module = EcalBarrelGeometryEP {}
         es_module = HcalHardcodeGeometryEP {}
@@ -28,6 +22,7 @@ process GeometryTest = {
  	
 	module print = AsciiOutputModule {}
         module prod = CaloGeometryAnalyzer {}
+#        module mfa = MagneticFieldAnalyser {}
 #provide a scheduler path
         path p1 = { print, prod }      
 }

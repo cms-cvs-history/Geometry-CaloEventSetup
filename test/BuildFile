@@ -6,3 +6,6 @@
 <flags SEAL_PLUGIN_NAME="testCaloGeometryESProducer">
 <library file=CaloGeometryAnalyzer.cc name=testCaloGeometryESProducer>
 </library>
+<bin file=dumpEEIndices2D.cpp>
+  <use name=root>
+</bin>

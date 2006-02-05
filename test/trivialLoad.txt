@@ -16,6 +16,7 @@ process GeometryTest = {
         }
 
         es_module = EcalBarrelGeometryEP {}
+        es_module = EcalEndcapGeometryEP {}
         es_module = HcalHardcodeGeometryEP {}
         es_module = CaloTowerHardcodeGeometryEP {}
 	es_module = CaloGeometryBuilder {}

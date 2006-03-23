@@ -1,0 +1,10 @@
+#
+# This cfi should be included to build the ECAL + HCAL geometry model
+#
+
+es_module = EcalBarrelGeometryEP {}
+es_module = EcalEndcapGeometryEP {}
+es_module = EcalPreshowerGeometryEP {}
+es_module = HcalHardcodeGeometryEP {}
+es_module = CaloTowerHardcodeGeometryEP {}
+ 

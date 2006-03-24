@@ -1,0 +1,5 @@
+es_source = XMLIdealGeometryESSource
+{
+   FileInPath GeometryConfiguration="Geometry/CaloEventSetup/test/data/testCaloConfiguration.xml"
+   string rootNodeName = "cms:OCMS"
+}

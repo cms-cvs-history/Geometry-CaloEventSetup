@@ -1,0 +1,5 @@
+#
+# This cfi should be included to build the Calo Topology
+#
+
+es_module = CaloTopologyBuilder {}

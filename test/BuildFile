@@ -9,15 +9,15 @@
 
 
 <library file=CaloGeometryAnalyzer.cc name=testCaloGeometryESProducer>
-<flags EDM_PLUGIN=1>
+<flags SEAL_PLUGIN_NAME="testCaloGeometryESProducer">
 </library>
 
 <library file=dumpEcalTrigTowerMapping.cc name=testEcalTrigTowerMappingSProducer>
-<flags EDM_PLUGIN=1>
+<flags SEAL_PLUGIN_NAME="testEcalTrigTowerMappingSProducer">
 </library>
 
 <library file=testEcalGetWindow.cc name=testEcalGetWindow>
-<flags EDM_PLUGIN=1>
+<flags SEAL_PLUGIN_NAME="testEcalGetWindow">
 </library>
 <bin file=dumpEEIndices2D.cpp>
 </bin>

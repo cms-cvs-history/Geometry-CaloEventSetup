@@ -13,7 +13,7 @@
 //
 // Original Author:  Jeremiah Mans
 //         Created:  Mon Oct  3 11:35:27 CDT 2005
-// $Id: CaloGeometryBuilder.cc,v 1.4 2005/11/02 07:55:24 meridian Exp $
+// $Id: CaloGeometryBuilder.h,v 1.1 2005/12/01 16:29:24 mansj Exp $
 //
 //
 

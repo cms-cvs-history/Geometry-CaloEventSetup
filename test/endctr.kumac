@@ -1,0 +1,75 @@
+trace on
+
+vector/crea xxx(14648) r 
+vector/crea yyy(14648) r 
+vector/crea zzz(14648) r 
+
+vector/crea oldxxx(14648) r 
+vector/crea oldyyy(14648) r 
+vector/crea oldzzz(14648) r 
+
+vector/crea difxxx(14648) r 
+vector/crea difyyy(14648) r 
+vector/crea difzzz(14648) r 
+
+APPLI COMIS QUIT
+      subroutine myin
+      vector xxx
+      vector yyy
+      vector zzz
+      vector oldxxx
+      vector oldyyy
+      vector oldzzz
+      integer ios, i, ie, ip
+
+      open(unit=31,file='ee.ctr',status='old')
+
+      do i=1,14648
+         read(31,1000) ie, ip, xxx(i), yyy(i), zzz(i)
+1000     format(2I4,3F12.4)
+c	 print *, ie, ip, xxx(i), yyy(i), zzz(i)
+      enddo
+
+      close(unit=31)
+
+      open(unit=31,file='oldee.ctr',status='old')
+
+      do i=1,14648
+         read(31,1000) ie, ip, oldxxx(i), oldyyy(i), oldzzz(i)
+c	 print *, ie, ip, oldxxx(i), oldyyy(i), oldzzz(i)
+      enddo
+
+      close(unit=31)
+      return
+      end
+      call myin
+      end
+QUIT
+
+*vector/print oldxxx
+
+vsub xxx oldxxx difxxx
+vsub yyy oldyyy difyyy
+vsub zzz oldzzz difzzz
+
+vscal difxxx 10000 difxxx
+vscal difyyy 10000 difyyy
+vscal difzzz 10000 difzzz
+
+
+for/file 71  endctr.eps
+meta 71 -113
+
+opt nsta
+opt logy
+set xval 0.6
+
+zone 1 3
+
+vector/plot difxxx
+vector/plot difyyy
+vector/plot difzzz
+
+close 71
+
+exit

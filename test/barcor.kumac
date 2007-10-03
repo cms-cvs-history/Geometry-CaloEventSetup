@@ -1,0 +1,138 @@
+trace on
+
+vector/crea xx0(61200) r 
+vector/crea yy0(61200) r 
+vector/crea zz0(61200) r 
+
+vector/crea oldxx0(61200) r 
+vector/crea oldyy0(61200) r 
+vector/crea oldzz0(61200) r 
+
+vector/crea difxx0(61200) r 
+vector/crea difyy0(61200) r 
+vector/crea difzz0(61200) r 
+
+vector/crea xx3(61200) r 
+vector/crea yy3(61200) r 
+vector/crea zz3(61200) r 
+
+vector/crea oldxx3(61200) r 
+vector/crea oldyy3(61200) r 
+vector/crea oldzz3(61200) r 
+
+vector/crea difxx3(61200) r 
+vector/crea difyy3(61200) r 
+vector/crea difzz3(61200) r 
+
+vector/crea xx6(61200) r 
+vector/crea yy6(61200) r 
+vector/crea zz6(61200) r 
+
+vector/crea oldxx6(61200) r 
+vector/crea oldyy6(61200) r 
+vector/crea oldzz6(61200) r 
+
+vector/crea difxx6(61200) r 
+vector/crea difyy6(61200) r 
+vector/crea difzz6(61200) r 
+
+APPLI COMIS QUIT
+      subroutine myin
+      vector xx0
+      vector yy0
+      vector zz0
+      vector oldxx0
+      vector oldyy0
+      vector oldzz0
+      vector xx3
+      vector yy3
+      vector zz3
+      vector oldxx3
+      vector oldyy3
+      vector oldzz3
+      vector xx6
+      vector yy6
+      vector zz6
+      vector oldxx6
+      vector oldyy6
+      vector oldzz6
+      integer ios, i, ie, ip
+
+      open(unit=31,file='eb.cor',status='old')
+
+      do i=1,61200
+         read(31,1000) ie, ip,
+     1        xx0(i), yy0(i), zz0(i),
+     1        xx3(i), yy3(i), zz3(i),
+     1        xx6(i), yy6(i), zz6(i)
+1000     format(2I4,9F10.4)
+      enddo
+
+      close(unit=31)
+
+      open(unit=31,file='oldeb.cor',status='old')
+
+      do i=1,61200
+         read(31,1000) ie, ip, 
+     1		oldxx0(i), oldyy0(i), oldzz0(i),
+     1          oldxx3(i), oldyy3(i), oldzz3(i),
+     1          oldxx6(i), oldyy6(i), oldzz6(i)
+      enddo
+
+      close(unit=31)
+      return
+      end
+      call myin
+      end
+QUIT
+
+
+vsub xx0 oldxx0 difxx0
+vsub yy0 oldyy0 difyy0
+vsub zz0 oldzz0 difzz0
+
+vscal difxx0 10000 difxx0
+vscal difyy0 10000 difyy0
+vscal difzz0 10000 difzz0
+
+vsub xx3 oldxx3 difxx3
+vsub yy3 oldyy3 difyy3
+vsub zz3 oldzz3 difzz3
+
+vscal difxx3 10000 difxx3
+vscal difyy3 10000 difyy3
+vscal difzz3 10000 difzz3
+
+vsub xx6 oldxx6 difxx6
+vsub yy6 oldyy6 difyy6
+vsub zz6 oldzz6 difzz6
+
+vscal difxx6 10000 difxx6
+vscal difyy6 10000 difyy6
+vscal difzz6 10000 difzz6
+
+
+for/file 71  barcor.eps
+meta 71 -113
+
+opt nsta
+opt logy
+set xval 0.6
+
+zone 3 3
+
+vector/plot difxx0
+vector/plot difyy0
+vector/plot difzz0
+
+vector/plot difxx3
+vector/plot difyy3
+vector/plot difzz3
+
+vector/plot difxx6
+vector/plot difyy6
+vector/plot difzz6
+
+close 71
+
+exit

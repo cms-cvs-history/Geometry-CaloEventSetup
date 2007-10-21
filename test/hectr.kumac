@@ -1,16 +1,16 @@
 trace on
 
-vector/crea xxx(61200) r 
-vector/crea yyy(61200) r 
-vector/crea zzz(61200) r 
+vector/crea xxx(2592) r 
+vector/crea yyy(2592) r 
+vector/crea zzz(2592) r 
 
-vector/crea oldxxx(61200) r 
-vector/crea oldyyy(61200) r 
-vector/crea oldzzz(61200) r 
+vector/crea oldxxx(2592) r 
+vector/crea oldyyy(2592) r 
+vector/crea oldzzz(2592) r 
 
-vector/crea difxxx(61200) r 
-vector/crea difyyy(61200) r 
-vector/crea difzzz(61200) r 
+vector/crea difxxx(2592) r 
+vector/crea difyyy(2592) r 
+vector/crea difzzz(2592) r 
 
 APPLI COMIS QUIT
       subroutine myin
@@ -20,21 +20,21 @@ APPLI COMIS QUIT
       vector oldxxx
       vector oldyyy
       vector oldzzz
-      integer ios, i, ie, ip
+      integer ios, i, ie, ip, id
 
-      open(unit=31,file='eb.ctr',status='old')
+      open(unit=31,file='he.ctr',status='old')
 
-      do i=1,61200
-         read(31,1000) ie, ip, xxx(i), yyy(i), zzz(i)
-1000     format(2I4,3F12.4)
+      do i=1,2592
+         read(31,1000) ie, ip, id, xxx(i), yyy(i), zzz(i)
+1000     format(3I4,3F12.4)
       enddo
 
       close(unit=31)
 
-      open(unit=31,file='oldeb.ctr',status='old')
+      open(unit=31,file='oldhe.ctr',status='old')
 
-      do i=1,61200
-         read(31,1000) ie, ip, oldxxx(i), oldyyy(i), oldzzz(i)
+      do i=1,2592
+         read(31,1000) ie, ip, id, oldxxx(i), oldyyy(i), oldzzz(i)
 	 if(i.eq.1) print *, oldxxx(i)
 5B      enddo
 
@@ -55,7 +55,7 @@ vscal difyyy 10000 difyyy
 vscal difzzz 10000 difzzz
 
 
-for/file 71  barctr.eps
+for/file 71  hectr.eps
 meta 71 -113
 
 opt nsta

@@ -1,40 +1,40 @@
 trace on
 
-vector/crea xx0(61200) r 
-vector/crea yy0(61200) r 
-vector/crea zz0(61200) r 
+vector/crea xx0(14648) r 
+vector/crea yy0(14648) r 
+vector/crea zz0(14648) r 
 
-vector/crea oldxx0(61200) r 
-vector/crea oldyy0(61200) r 
-vector/crea oldzz0(61200) r 
+vector/crea oldxx0(14648) r 
+vector/crea oldyy0(14648) r 
+vector/crea oldzz0(14648) r 
 
-vector/crea difxx0(61200) r 
-vector/crea difyy0(61200) r 
-vector/crea difzz0(61200) r 
+vector/crea difxx0(14648) r 
+vector/crea difyy0(14648) r 
+vector/crea difzz0(14648) r 
 
-vector/crea xx3(61200) r 
-vector/crea yy3(61200) r 
-vector/crea zz3(61200) r 
+vector/crea xx3(14648) r 
+vector/crea yy3(14648) r 
+vector/crea zz3(14648) r 
 
-vector/crea oldxx3(61200) r 
-vector/crea oldyy3(61200) r 
-vector/crea oldzz3(61200) r 
+vector/crea oldxx3(14648) r 
+vector/crea oldyy3(14648) r 
+vector/crea oldzz3(14648) r 
 
-vector/crea difxx3(61200) r 
-vector/crea difyy3(61200) r 
-vector/crea difzz3(61200) r 
+vector/crea difxx3(14648) r 
+vector/crea difyy3(14648) r 
+vector/crea difzz3(14648) r 
 
-vector/crea xx6(61200) r 
-vector/crea yy6(61200) r 
-vector/crea zz6(61200) r 
+vector/crea xx6(14648) r 
+vector/crea yy6(14648) r 
+vector/crea zz6(14648) r 
 
-vector/crea oldxx6(61200) r 
-vector/crea oldyy6(61200) r 
-vector/crea oldzz6(61200) r 
+vector/crea oldxx6(14648) r 
+vector/crea oldyy6(14648) r 
+vector/crea oldzz6(14648) r 
 
-vector/crea difxx6(61200) r 
-vector/crea difyy6(61200) r 
-vector/crea difzz6(61200) r 
+vector/crea difxx6(14648) r 
+vector/crea difyy6(14648) r 
+vector/crea difzz6(14648) r 
 
 APPLI COMIS QUIT
       subroutine myin
@@ -58,9 +58,9 @@ APPLI COMIS QUIT
       vector oldzz6
       integer ios, i, ie, ip
 
-      open(unit=31,file='eb.cor',status='old')
+      open(unit=31,file='ee.cor',status='old')
 
-      do i=1,61200
+      do i=1,14648
          read(31,1000) ie, ip,
      1        xx0(i), yy0(i), zz0(i),
      1        xx3(i), yy3(i), zz3(i),
@@ -70,9 +70,9 @@ APPLI COMIS QUIT
 
       close(unit=31)
 
-      open(unit=31,file='oldeb.cor',status='old')
+      open(unit=31,file='oldee.cor',status='old')
 
-      do i=1,61200
+      do i=1,14648
          read(31,1000) ie, ip, 
      1		oldxx0(i), oldyy0(i), oldzz0(i),
      1          oldxx3(i), oldyy3(i), oldzz3(i),
@@ -112,7 +112,7 @@ vscal difyy6 10000 difyy6
 vscal difzz6 10000 difzz6
 
 
-for/file 71  barcor.eps
+for/file 71  eecor.eps
 meta 71 -113
 
 opt nsta

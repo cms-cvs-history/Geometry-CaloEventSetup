@@ -1,0 +1,73 @@
+trace on
+
+vector/crea xxx(2592) r 
+vector/crea yyy(2592) r 
+vector/crea zzz(2592) r 
+
+vector/crea oldxxx(2592) r 
+vector/crea oldyyy(2592) r 
+vector/crea oldzzz(2592) r 
+
+vector/crea difxxx(2592) r 
+vector/crea difyyy(2592) r 
+vector/crea difzzz(2592) r 
+
+APPLI COMIS QUIT
+      subroutine myin
+      vector xxx
+      vector yyy
+      vector zzz
+      vector oldxxx
+      vector oldyyy
+      vector oldzzz
+      integer ios, i, ie, ip, id
+
+      open(unit=31,file='hb.ctr',status='old')
+
+      do i=1,2592
+         read(31,1000) ie, ip, id, xxx(i), yyy(i), zzz(i)
+1000     format(3I4,3F12.4)
+      enddo
+
+      close(unit=31)
+
+      open(unit=31,file='oldhb.ctr',status='old')
+
+      do i=1,2592
+         read(31,1000) ie, ip, id, oldxxx(i), oldyyy(i), oldzzz(i)
+	 if(i.eq.1) print *, oldxxx(i)
+5B      enddo
+
+      close(unit=31)
+      return
+      end
+      call myin
+      end
+QUIT
+
+
+vsub xxx oldxxx difxxx
+vsub yyy oldyyy difyyy
+vsub zzz oldzzz difzzz
+
+vscal difxxx 10000 difxxx
+vscal difyyy 10000 difyyy
+vscal difzzz 10000 difzzz
+
+
+for/file 71  hbctr.eps
+meta 71 -113
+
+opt nsta
+opt logy
+set xval 0.6
+
+zone 1 3
+
+vector/plot difxxx
+vector/plot difyyy
+vector/plot difzzz
+
+close 71
+
+exit

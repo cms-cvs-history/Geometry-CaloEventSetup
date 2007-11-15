@@ -8,5 +8,5 @@ es_module = EcalPreshowerGeometryEP {}
 es_module = HcalHardcodeGeometryEP {}
 es_module = ZdcHardcodeGeometryEP {}
 es_module = CaloTowerHardcodeGeometryEP {}
-es_module = CaloGeometryBuilder {}        
+es_module = CaloGeometryBuilder { vstring SelectedCalos = {"HCAL","ZDC","EcalBarrel","EcalEndcap","EcalPreshower","TOWER"} }        
   

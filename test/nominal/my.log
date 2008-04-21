@@ -1,0 +1,196 @@
+TimeReport> Report activated
+TimeReport> Report columns headings for events: eventnum runnum timetaken
+TimeReport> Report columns headings for modules: eventnum runnum modulelabel modulename timetaken
+%MSG-i FwkReport:  main_input:source 18-Apr-2008 20:37:36 CEST BeforeEvents
+Begin processing the 1st record. Run 1, Event 1
+%MSG
+TimeModule> 1 1 etta dumpEcalTrigTowerMapping 9.24563
+TimeModule> 1 1 ctgw testEcalGetWindow 0.000499964
+Name now is eb
+***************total number = 61200
+Name now is ee
+***************total number = 14648
+Checking getClosestCell for position (-38.9692,-27.5548,-317) 
+Position of Closest Cell in EE  (-39.9886,-28.0023,-319.418) 
+Name now is es
+***************total number = 137216
+Name now is hb
+***************total number = 2592
+Name now is he
+***************total number = 2592
+Name now is ho
+***************total number = 2160
+Name now is hf
+***************total number = 1728
+TimeModule> 1 1 cga CaloGeometryAnalyzer 52.6902
+At:  (0,0,0)  phi=0 B=  (9.09006e-22,-9.09625e-22,4.0681) 
+TimeModule> 1 1 mfa testMagneticField 0.829958
+TimeEvent> 1 1 62.7672
+%MSG-i FwkReport:  main_input:source 18-Apr-2008 20:38:39 CEST Run: 1 Event: 1
+Begin processing the 2nd record. Run 1, Event 2
+%MSG
+%MSG-w MemoryCheck:  main_input:source 18-Apr-2008 20:38:39 CEST Run: 1 Event: 1
+MemoryCheck: module source:source VSIZE 189.731 0 RSS 132.469 0.065536
+
+%MSG
+%MSG-w MemoryCheck:  dumpEcalTrigTowerMapping:etta 18-Apr-2008 20:38:40 CEST  Run: 1 Event: 2
+MemoryCheck: module dumpEcalTrigTowerMapping:etta VSIZE 199.803 10.0721 RSS 143.696 11.2271
+
+%MSG
+TimeModule> 2 1 etta dumpEcalTrigTowerMapping 0.583978
+%MSG-w MemoryCheck:  testEcalGetWindow:ctgw 18-Apr-2008 20:38:40 CEST  Run: 1 Event: 2
+MemoryCheck: module testEcalGetWindow:ctgw VSIZE 199.803 0At:  (0,0,0)  phi=0 B=  (9.09006e-22,-9.09625e-22,4.0681) 
+TimeModule> 2 1 ctgw testEcalGetWindow 0.00466585
+TimeModule> 2 1 cga CaloGeometryAnalyzer 2.21729e-05
+TimeModule> 2 1 mfa testMagneticField 0.000138998
+TimeEvent> 2 1 0.589091
+%MSG-i FwkReport:  main_input:source 18-Apr-2008 20:38:40 CEST Run: 1 Event: 2
+Begin processing the 3rd record. Run 1, Event 3
+%MSG
+%MSG-w MemoryCheck:  dumpEcalTrigTowerMapping:etta 18-Apr-2008 20:38:40 CEST  Run: 1 Event: 3
+MemoryCheck: module dumpEcalTrigTowerMapping:etta VSIZE 199.803 0 RSS 143.97 0.258048
+
+%MSG
+TimeModule> 3 1 etta dumpEcalTrigTowerMapping 0.0308592
+%MSG-w MemoryCheck:  testEcalGetWindow:ctgw 18-Apr-2008 20:38:40 CEST  Run: 1 Event: 3
+MemoryCheck: module testEcalGetWindow:ctgw VSIZE 199.803 0 RSS 143.983 0.012288
+
+%MSG
+TimeModule> 3 1 ctgw testEcalGetWindow 0.00405598
+TimeModule> 3 1 cga CaloGeometryAnalyzer 2.09808e-05
+At:  (0,0,0)  phi=0 B=  (9.09006e-22,-9.09625e-22,4.0681) 
+TimeModule> 3 1 mfa testMagneticField 4.48227e-05
+TimeEvent> 3 1 0.0353529
+%MSG-i FwkReport:  main_input:source 18-Apr-2008 20:38:40 CEST Run: 1 Event: 3
+Begin processing the 4th record. Run 1, Event 4
+%MSG
+TimeModule> 4 1 etta dumpEcalTrigTowerMapping 2.00272e-05
+TimeModule> 4 1 ctgw testEcalGetWindow 1.90735e-05
+TimeModule> 4 1 cga CaloGeometryAnalyzer 1.78814e-05
+At:  (0,0,0)  phi=0 B=  (9.09006e-22,-9.09625e-22,4.0681) 
+TimeModule> 4 1 mfa testMagneticField 3.19481e-05
+TimeEvent> 4 1 0.000379086
+%MSG-i FwkReport:  main_input:source 18-Apr-2008 20:38:40 CEST Run: 1 Event: 4
+Begin processing the 5th record. Run 1, Event 5
+%MSG
+TimeModule> 5 1 etta dumpEcalTrigTowerMapping 2.7895e-05
+TimeModule> 5 1 ctgw testEcalGetWindow 1.81198e-05
+TimeModule> 5 1 cga CaloGeometryAnalyzer 1.78814e-05
+At:  (0,0,0)  phi=0 B=  (9.09006e-22,-9.09625e-22,4.0681) 
+TimeModule> 5 1 mfa testMagneticField 3.40939e-05
+TimeEvent> 5 1 0.000384092
+%MSG-i FwkReport:  main_input:source 18-Apr-2008 20:38:40 CEST Run: 1 Event: 5
+Begin processing the 6th record. Run 1, Event 6
+%MSG
+TimeModule> 6 1 etta dumpEcalTrigTowerMapping 1.78814e-05
+TimeModule> 6 1 ctgw testEcalGetWindow 1.88351e-05
+TimeModule> 6 1 cga CaloGeometryAnalyzer 1.78814e-05
+At:  (0,0,0)  phi=0 B=  (9.09006e-22,-9.09625e-22,4.0681) 
+TimeModule> 6 1 mfa testMagneticField 3.19481e-05
+TimeEvent> 6 1 0.000372887
+%MSG-i FwkReport:  main_input:source 18-Apr-2008 20:38:40 CEST Run: 1 Event: 6
+Begin processing the 7th record. Run 1, Event 7
+%MSG
+TimeModule> 7 1 etta dumpEcalTrigTowerMapping 1.81198e-05
+TimeModule> 7 1 ctgw testEcalGetWindow 1.81198e-05
+TimeModule> 7 1 cga CaloGeometryAnalyzer 1.81198e-05
+At:  (0,0,0)  phi=0 B=  (9.09006e-22,-9.09625e-22,4.0681) 
+TimeModule> 7 1 mfa testMagneticField 3.19481e-05
+TimeEvent> 7 1 0.000370979
+%MSG-i FwkReport:  main_input:source 18-Apr-2008 20:38:40 CEST Run: 1 Event: 7
+Begin processing the 8th record. Run 1, Event 8
+%MSG
+TimeModule> 8 1 etta dumpEcalTrigTowerMapping 1.90735e-05
+TimeModule> 8 1 ctgw testEcalGetWindow 1.88351e-05
+TimeModule> 8 1 cga CaloGeometryAnalyzer 1.81198e-05
+At:  (0,0,0)  phi=0 B=  (9.09006e-22,-9.09625e-22,4.0681) 
+TimeModule> 8 1 mfa testMagneticField 3.19481e-05
+TimeEvent> 8 1 0.00037694
+%MSG-i FwkReport:  main_input:source 18-Apr-2008 20:38:40 CEST Run: 1 Event: 8
+Begin processing the 9th record. Run 1, Event 9
+%MSG
+TimeModule> 9 1 etta dumpEcalTrigTowerMapping 1.78814e-05
+TimeModule> 9 1 ctgw testEcalGetWindow 1.90735e-05
+TimeModule> 9 1 cga CaloGeometryAnalyzer 1.78814e-05
+At:  (0,0,0)  phi=0 B=  (9.09006e-22,-9.09625e-22,4.0681) 
+TimeModule> 9 1 mfa testMagneticField 3.19481e-05
+TimeEvent> 9 1 0.000371933
+%MSG-i FwkReport:  main_input:source 18-Apr-2008 20:38:40 CEST Run: 1 Event: 9
+Begin processing the 10th record. Run 1, Event 10
+%MSG
+TimeModule> 10 1 etta dumpEcalTrigTowerMapping 1.90735e-05
+TimeModule> 10 1 ctgw testEcalGetWindow 1.78814e-05
+TimeModule> 10 1 cga CaloGeometryAnalyzer 1.81198e-05
+At:  (0,0,0)  phi=0 B=  (9.09006e-22,-9.09625e-22,4.0681) 
+TimeModule> 10 1 mfa testMagneticField 3.69549e-05
+TimeEvent> 10 1 0.000374079
+TimeReport> Time report complete in 63.3968 seconds
+ Time Summary: 
+ Min: 0.000370979
+ Max: 62.7672
+ Avg: 6.33968
+
+
+=============================================
+
+MessageLogger Summary
+
+ type     category        sev    module        subroutine        count    total
+ ---- -------------------- -- ---------------- ----------------  -----    -----
+    1 CaloGeometryBuilder  -i dumpEcalTrigTowe                       6*       6
+    2 DDLParser            -i                                        2*       2
+    3 EcalGeom             -i                                        1*       1
+    4 EcalGeom             -i dumpEcalTrigTowe                       6*       6
+    5 EventSetupDependency -i AfterModuleConst                       1*       1
+    6 FwkReport            -i main_input:sourc                      10       10
+    7 Geometry             -i dumpEcalTrigTowe                       1*       1
+    8 HCAL                 -i dumpEcalTrigTowe                       1*       1
+    9 HcalHardcodeGeometry -i dumpEcalTrigTowe                       4*       4
+   10 Root_Information     -i dumpEcalTrigTowe TCanvas::Print        2*       2
+   11 Root_Information     -i testEcalGetWindo TCanvas::Print        2*       2
+   12 ZdcHardcodeGeometry  -i dumpEcalTrigTowe                       3*       3
+   13 MemoryCheck          -w dumpEcalTrigTowe                       2        2
+   14 MemoryCheck          -w main_input:sourc                       1        1
+   15 MemoryCheck          -w testEcalGetWindo                       2        2
+   16 TimeEvent            -s PostModule                            10       10
+   17 TimeModule           -s CaloGeometryAnal                      10       10
+   18 TimeModule           -s dumpEcalTrigTowe                      10       10
+   19 TimeModule           -s testEcalGetWindo                      10       10
+   20 TimeModule           -s testMagneticFiel                      10       10
+   21 TimeReport           -s                                        1        1
+   22 TimeReport           -s PostSource                             1        1
+
+* Some occurrences of this message were suppressed in all logs, due to limits.
+
+ type    category    Examples: run/evt        run/evt          run/evt
+ ---- -------------------- ---------------- ---------------- ----------------
+    1 CaloGeometryBuilder  1/1              1/1              1/1
+    2 DDLParser            pre-events       pre-events       
+    3 EcalGeom             pre-events                        
+    4 EcalGeom             1/1              1/1              1/1
+    5 EventSetupDependency pre-events                        
+    6 FwkReport            BeforeEvents     1/1              1/9
+    7 Geometry             1/1                               
+    8 HCAL                 1/1                               
+    9 HcalHardcodeGeometry 1/1              1/1              1/1
+   10 Root_Information     1/2              1/3              
+   11 Root_Information     1/2              1/3              
+   12 ZdcHardcodeGeometry  1/1              1/1              1/1
+   13 MemoryCheck          1/2              1/3              
+   14 MemoryCheck          1/1                               
+   15 MemoryCheck          1/2              1/3              
+   16 TimeEvent            1/1              1/2              1/10
+   17 TimeModule           1/1              1/2              1/10
+   18 TimeModule           1/1              1/2              1/10
+   19 TimeModule           1/1              1/2              1/10
+   20 TimeModule           1/1              1/2              1/10
+   21 TimeReport           BeforeEvents                      
+   22 TimeReport           1/10                              
+
+Severity    # Occurrences   Total Occurrences
+--------    -------------   -----------------
+Info                   39                  39
+Warning                 5                   5
+System                 52                  52
+
+Main Thread CPU elapsed time 67

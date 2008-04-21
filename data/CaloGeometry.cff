@@ -2,11 +2,19 @@
 # This cfi should be included to build the ECAL + HCAL geometry model
 #
 
-es_module = EcalBarrelGeometryEP {}
-es_module = EcalEndcapGeometryEP {}
-es_module = EcalPreshowerGeometryEP {}
-es_module = HcalHardcodeGeometryEP {}
-es_module = ZdcHardcodeGeometryEP {}
+es_module = EcalBarrelGeometryEP    { untracked bool applyAlignment = false }
+
+es_module = EcalEndcapGeometryEP    { untracked bool applyAlignment = false }
+
+es_module = EcalPreshowerGeometryEP { untracked bool applyAlignment = false }
+
+es_module = HcalHardcodeGeometryEP   { untracked bool applyAlignment = false }
+
+es_module = HcalTopologyIdealEP      {}
+
+es_module = ZdcHardcodeGeometryEP   { untracked bool applyAlignment = false }
+
 es_module = CaloTowerHardcodeGeometryEP {}
+
 es_module = CaloGeometryBuilder { vstring SelectedCalos = {"HCAL","ZDC","EcalBarrel","EcalEndcap","EcalPreshower","TOWER"} }        
   

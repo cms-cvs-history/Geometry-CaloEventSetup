@@ -1,0 +1,2 @@
+es_module = CaloGeometryBuilder { vstring SelectedCalos = {"HCAL","ZDC","EcalBarrel","EcalEndcap","EcalPreshower","TOWER"} }        
+  

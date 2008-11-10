@@ -35,8 +35,8 @@ APPLI COMIS QUIT
 
       do i=1,61200
          read(31,1000) ie, ip, oldxxx(i), oldyyy(i), oldzzz(i)
-	 if(i.eq.1) print *, oldxxx(i)
-5B      enddo
+c	 if(i.eq.1) print *, oldxxx(i)
+      enddo
 
       close(unit=31)
       return

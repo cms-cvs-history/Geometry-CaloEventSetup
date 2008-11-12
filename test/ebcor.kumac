@@ -121,6 +121,21 @@ set xval 0.6
 
 zone 3 3
 
+vector/print difxx0(1:10)
+vector/print difxx0(1000:1010)
+vector/print difxx0(51000:51010)
+
+vector/print difyy0(1:10)
+vector/print difyy0(1000:1010)
+vector/print difyy0(51000:51010)
+
+vector/print difzz0(1:10)
+vector/print difzz0(1000:1010)
+vector/print difzz0(51000:51010)
+
+
+
+
 vector/plot difxx0
 vector/plot difyy0
 vector/plot difzz0

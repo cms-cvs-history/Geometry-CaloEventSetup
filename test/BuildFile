@@ -6,6 +6,7 @@
 <use name=DataFormats/HcalDetId>
 <use name=DataFormats/EcalDetId>
 <use name=FWCore/Framework>
+<use name=PhysicsTools/UtilAlgos>
 
 
 <library file=CaloGeometryAnalyzer.cc name=testCaloGeometryESProducer>

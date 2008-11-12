@@ -48,6 +48,8 @@ process.Timing = cms.Service("Timing")
 
 process.SimpleMemoryCheck = cms.Service("SimpleMemoryCheck")
 
+process.TFileService = cms.Service("TFileService", fileName = cms.string('calogeom.root') )
+
 process.p1 = cms.Path(process.etta*process.ctgw*process.cga*process.mfa)
 
 

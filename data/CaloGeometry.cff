@@ -1,5 +1,0 @@
-include "Geometry/CaloEventSetup/data/CaloGeometryBuilder.cfi"
-include "Geometry/EcalAlgo/data/EcalGeometry.cff"
-include "Geometry/HcalEventSetup/data/HcalGeometry.cff"
-include "Geometry/ForwardGeometry/data/ZdcHardcodeGeometry.cfi"
-  

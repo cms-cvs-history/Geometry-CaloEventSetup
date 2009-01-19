@@ -27,6 +27,21 @@ process.load("Geometry.CaloEventSetup.CaloTopology_cfi")
 # Ecal TT mapping
 process.load("Geometry.CaloEventSetup.EcalTrigTowerConstituents_cfi")
 
+
+process.load("CondCore.DBCommon.CondDBCommon_cfi")
+
+process.PoolDBESSource = cms.ESSource("PoolDBESSource",
+                                      process.CondDBCommon,
+                                      loadAll = cms.bool(True),
+                                      toGet = cms.VPSet(cms.PSet(record = cms.string('PEcalBarrelRcd'),tag = cms.string('TEST02')),
+                                                        cms.PSet(record = cms.string('PEcalEndcapRcd'),tag = cms.string('TEST03')),
+                                                        cms.PSet(record = cms.string('PEcalPreshowerRcd'),tag = cms.string('TEST04'))
+                                                        ),
+                                      BlobStreamerName = cms.untracked.string('TBufferBlobStreamingService'),
+                                      timetype = cms.untracked.string('runnumber'),
+                                      connect = cms.string('sqlite_file:myfile.db')
+                                      )
+
 process.load("FWCore.MessageLogger.MessageLogger_cfi")
 
 process.maxEvents = cms.untracked.PSet(

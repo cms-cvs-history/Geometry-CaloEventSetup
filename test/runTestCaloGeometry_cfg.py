@@ -39,13 +39,13 @@ process.PoolDBESSource = cms.ESSource("PoolDBESSource",
                                                         ),
                                       BlobStreamerName = cms.untracked.string('TBufferBlobStreamingService'),
                                       timetype = cms.untracked.string('runnumber'),
-                                      connect = cms.string('sqlite_file:myfile.db')
+                                      connect = cms.string('sqlite_file:calofile.db')
                                       )
 
 process.load("FWCore.MessageLogger.MessageLogger_cfi")
 
 process.maxEvents = cms.untracked.PSet(
-    input = cms.untracked.int32(10)
+    input = cms.untracked.int32(4)
 )
 process.source = cms.Source("EmptySource")
 

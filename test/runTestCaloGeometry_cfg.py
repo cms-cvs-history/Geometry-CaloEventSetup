@@ -19,17 +19,6 @@ process.load("Geometry.CMSCommonData.cmsIdealGeometryXML_cfi")
 
 process.load("Geometry.CaloEventSetup.CaloGeometryDBReader_cfi")
 
-#process.load("Geometry.CaloEventSetup.CaloGeometry_cff")
-
-#process.load("Geometry.CaloEventSetup.AlignedCaloGeometry_cfi")
-
-#process.load("Geometry.CaloEventSetup.FakeCaloAlignments_cff")
-
-process.load("Geometry.CaloEventSetup.CaloTopology_cfi")
-
-# Ecal TT mapping
-process.load("Geometry.CaloEventSetup.EcalTrigTowerConstituents_cfi")
-
 
 process.load("CondCore.DBCommon.CondDBCommon_cfi")
 
@@ -49,6 +38,24 @@ process.PoolDBESSource = cms.ESSource("PoolDBESSource",
                                       timetype = cms.untracked.string('runnumber'),
                                       connect = cms.string('sqlite_file:calofile.db')
                                       )
+
+
+#from Geometry.CaloEventSetup.calodbsqlitefile import *
+
+#process.load("Geometry.CaloEventSetup.calodbsqlitefile")
+
+#process.load("Geometry.CaloEventSetup.CaloGeometry_cff")
+
+#process.load("Geometry.CaloEventSetup.AlignedCaloGeometry_cfi")
+
+#process.load("Geometry.CaloEventSetup.FakeCaloAlignments_cff")
+
+process.load("Geometry.CaloEventSetup.CaloTopology_cfi")
+
+# Ecal TT mapping
+process.load("Geometry.CaloEventSetup.EcalTrigTowerConstituents_cfi")
+
+
 
 process.load("FWCore.MessageLogger.MessageLogger_cfi")
 

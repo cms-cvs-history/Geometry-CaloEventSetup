@@ -17,9 +17,9 @@ process.load("Geometry.CMSCommonData.cmsIdealGeometryXML_cfi")
 
 # Calo geometry service model
 
-#process.load("Geometry.CaloEventSetup.calodbsqlitefile")
+process.load("Geometry.CaloEventSetup.calodbsqlitefile")
 
-process.load("Geometry.CaloEventSetup.CaloGeometry_cff")
+#process.load("Geometry.CaloEventSetup.CaloGeometry_cff")
 
 #process.load("Geometry.CaloEventSetup.AlignedCaloGeometry_cfi")
 

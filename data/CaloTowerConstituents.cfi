@@ -1,7 +1,0 @@
-#
-# This cfi should be included to make the CaloTowersConstituentsMap 
-#
-
-es_module = CaloTowerConstituentsMapBuilder {
-#  untracked string MapFile = "" # file with EE, other mapping
-}

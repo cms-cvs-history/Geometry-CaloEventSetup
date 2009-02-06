@@ -1,7 +1,0 @@
-#
-# This cfi should be included to build the ALIGNED ECAL + HCAL geometry model
-#
-replace     EcalBarrelGeometryEP.applyAlignment = true
-replace     EcalEndcapGeometryEP.applyAlignment = true
-replace     EcalPreshowerGeometryEP.applyAlignment = true
-  

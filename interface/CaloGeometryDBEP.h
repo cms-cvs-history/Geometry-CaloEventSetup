@@ -102,7 +102,7 @@ class CaloGeometryDBEP : public edm::ESProducer
 	    ivec = pG->getIndexes() ;
 	 }	 
 //*********************************************************************************************
-
+/*
 	 const unsigned int nTrParm ( tvec.size()/T::k_NumberOfCellsForCorners ) ;
 
 	 assert( dvec.size() == T::k_NumberOfShapes * T::k_NumberOfParametersPerShape ) ;
@@ -200,7 +200,9 @@ class CaloGeometryDBEP : public edm::ESProducer
 	 }
 
 	 ptr->initializeParms() ; // initializations; must happen after cells filled
+*/
 
+	 PtrType ptr ( new T ) ;
 	 return ptr ; 
       }
 
